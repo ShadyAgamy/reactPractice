@@ -1,0 +1,48 @@
+.removeIcon {
+    margin-left: 10px !important;
+    cursor: pointer;
+
+    img {
+        width: 1.4rem;
+    }
+}
+
+.btn-block {
+    width: 100%;
+}
+
+button.btn.plusButton {
+    font-size: 1.8rem;
+    line-height: 1.2rem;
+    background: #85BCEA;
+    border: 1px solid currentColor;
+    outline: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        background: #509fe1;
+    }
+}
+
+.InlineBtns {
+    margin-bottom: 1rem;
+
+    .btn {
+        margin-right: 1rem;
+        font-size: 14px;
+        padding: .3rem 1.5rem;
+
+        &:disabled {
+            cursor: not-allowed;
+            pointer-events: all !important;
+        }
+
+        &.btn-secondary {
+            background-color: #D6D6D6;
+            border-color: #D6D6D6;
+            color: black;
+            font-weight: 500;
+        }
+    }
+}

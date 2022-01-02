@@ -1,0 +1,31 @@
+@import '../../index.scss';
+
+.header {
+    height: 100px;
+
+    .navbar-brand img {
+        width: 50px;
+    }
+}
+
+.protectedNav{
+    .container-fluid {
+        justify-content: flex-start;
+
+        .btn {
+            font-size: 1rem;
+            color: #2F2F2F;
+            font-weight: 500;
+
+            &.logout {
+                margin-left: auto;
+            }
+        }
+    }
+}
+
+.navbar {
+    @include small {
+        padding: .5rem 0rem;
+    }
+}

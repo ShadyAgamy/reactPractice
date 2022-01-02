@@ -1,0 +1,42 @@
+@import '../../index.scss';
+
+.homePage {
+    width: 95%;
+    margin: 4rem auto;
+    text-align: center;
+    justify-content: center;
+    color: #293446;
+
+    &_header {
+        width: 80%;
+        margin: 0 auto 4rem;
+        white-space: nowrap;
+
+        h1 {
+            font-size: 1rem;
+
+            @include small {
+                font-size: 18px;
+            }
+
+            @include medium {
+                font-size: 30px;
+            }
+
+            @include large {
+                font-size: 44px;
+            }
+
+            @include xlarge {
+                font-size: 64px;
+            }
+
+
+
+
+
+        }
+    }
+
+
+}
