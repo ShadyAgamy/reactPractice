@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import Select from "react-select";
 import InputRange from "react-input-range";
@@ -24,8 +24,6 @@ export default function Store() {
     };
   });
 
-  useEffect(() => {}, []);
-
   const displayProduct = () => {
     if (localityParams) {
       return allProducts
@@ -47,7 +45,6 @@ export default function Store() {
   };
 
   const handleChange = (selectedOption) => {
-    console.log(selectedOption);
     let cities = selectedOption.value; // e.g ['Cairo', 'Red Sea']
     setLocalityParams(cities);
   };
@@ -67,7 +64,6 @@ export default function Store() {
   };
 
   const handleBedRooms = (selectedOption) => {
-    console.log(selectedOption.value);
     const filteredProductsWithBedRooms = initialProducts.filter((product) => {
       return parseInt(product.bedroom.value) === parseInt(selectedOption.value);
     });
@@ -78,7 +74,7 @@ export default function Store() {
     <div>
       <Header />
       <div className="row filterProperties">
-        <div className="col col-md-6">
+        <div className="col col-md-4">
           <label className="form-label">By Locality</label>
           <Select
             onChange={handleChange}
@@ -88,7 +84,7 @@ export default function Store() {
             classNamePrefix="select"
           />
         </div>
-        <div className="col col-md-6">
+        <div className="col col-md-4">
           <label className="form-label mb-4">Price Range</label>
           <InputRange
             maxValue={1000}
@@ -97,16 +93,16 @@ export default function Store() {
             onChange={(value) => handelPriceSelector(value)}
           />
         </div>
-        <div className="col col-md-6">
-        <label className="form-label">Bedroom</label>
-        <Select
-          onChange={handleBedRooms}
-          name="beedrooms"
-          options={bedrooms}
-          className="basic-multi-select"
-          classNamePrefix="select"
-        />
-      </div>
+        <div className="col col-md-4">
+          <label className="form-label">Bedroom</label>
+          <Select
+            onChange={handleBedRooms}
+            name="beedrooms"
+            options={bedrooms}
+            className="basic-multi-select"
+            classNamePrefix="select"
+          />
+        </div>
       </div>
 
       <div className="products_list">

@@ -6,6 +6,7 @@ import reduxThunk from "redux-thunk";
 import { persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
 import { PersistGate } from 'redux-persist/integration/react';
+
 import App from './App';
 import "./index.scss"
 

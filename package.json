@@ -1,6 +1,6 @@
 {
-  "homepage ": "https://github.com/ShadyAgamy/reactPractice",
   "name": "client",
+  "homepage": "https://ShadyAgamy.github.io/reactPractice",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
