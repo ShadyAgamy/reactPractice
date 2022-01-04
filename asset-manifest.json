@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ShadyAgamy/reactPractice/static/css/main.fcd11603.chunk.css",
-    "main.js": "/ShadyAgamy/reactPractice/static/js/main.6f2fb5dc.chunk.js",
-    "main.js.map": "/ShadyAgamy/reactPractice/static/js/main.6f2fb5dc.chunk.js.map",
+    "main.js": "/ShadyAgamy/reactPractice/static/js/main.db1d4ccf.chunk.js",
+    "main.js.map": "/ShadyAgamy/reactPractice/static/js/main.db1d4ccf.chunk.js.map",
     "runtime-main.js": "/ShadyAgamy/reactPractice/static/js/runtime-main.b40eb109.js",
     "runtime-main.js.map": "/ShadyAgamy/reactPractice/static/js/runtime-main.b40eb109.js.map",
     "static/js/2.8d0e1cc8.chunk.js": "/ShadyAgamy/reactPractice/static/js/2.8d0e1cc8.chunk.js",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.b40eb109.js",
     "static/js/2.8d0e1cc8.chunk.js",
     "static/css/main.fcd11603.chunk.css",
-    "static/js/main.6f2fb5dc.chunk.js"
+    "static/js/main.db1d4ccf.chunk.js"
   ]
 }
