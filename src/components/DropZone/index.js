@@ -47,11 +47,13 @@ const DropzoneUploader = React.memo(({ input, meta, labelName, required, initial
     multiple: false,
     noDrag: true,
     onDrop: (acceptedFiles) => {
+      console.log(acceptedFiles)
       const files = acceptedFiles.map((file) =>
         Object.assign(file, {
           preview: URL.createObjectURL(file),
         })
       );
+      
       setFiles(files);
       console.log(files)
       if (input.onChange) {

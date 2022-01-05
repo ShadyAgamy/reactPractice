@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import { Field } from "react-final-form";
 import Dropzone from "../DropZone";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import Input from "../Input";
 import Select from "react-select";
 import { cities, carpetArea, selectOptions } from "../../database";
@@ -10,6 +10,8 @@ import TextArea from "../textarea";
 export default function AddProperty({  submitting, values }) {
   const productToAddSelector = useSelector((state) => state.productToAdd);
   useEffect(() => {}, [productToAddSelector]);
+  const dispatch = useDispatch();
+
 
   const localityOptions = cities.map((city) => {
     return {
@@ -17,6 +19,7 @@ export default function AddProperty({  submitting, values }) {
       label: city,
     };
   });
+
 
   const SelectAdapter = ({ meta, input, labelName, options, ...rest }) => {
     return (
@@ -29,7 +32,6 @@ export default function AddProperty({  submitting, values }) {
   };
 
   const required = (value) => (value ? undefined : "Required");
-  
   return (
     <React.Fragment>
       <h3 className="h3 text-center mb-5">Add New Property</h3>
@@ -126,6 +128,7 @@ export default function AddProperty({  submitting, values }) {
           </div>
 
           <div className="col-md-5">
+            <p>Recommended size is 460x460 or 800x600</p>
             <Field name="image1">
               {({ input, meta }) => (
                 <div>
@@ -134,7 +137,7 @@ export default function AddProperty({  submitting, values }) {
                     meta={meta}
                     labelName="Product Image 1"
                     required="required"
-                    
+                    // initialFiles={[imageToEdit("image1")]}
                   />
                 </div>
               )}
@@ -154,7 +157,7 @@ export default function AddProperty({  submitting, values }) {
           </button>
         </div>
 
-        
+        <pre>{JSON.stringify(values, 0, 2)}</pre>
       </div>
     </React.Fragment>
   );

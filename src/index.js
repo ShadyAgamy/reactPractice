@@ -23,7 +23,7 @@ const persistedReducer = persistReducer(persistenceConfigs, reducers);
 
  const persistor = persistStore(store)
 
-
+ 
 ReactDOM.render(
   <Provider store={store}>
     <PersistGate loading={null}  persistor={persistor}>

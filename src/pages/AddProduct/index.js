@@ -16,14 +16,12 @@ const AddProduct = () => {
     history.push("/store")
   };
 
-  const initialValues = {};
-
-  console.log(initialValues);
+  const initialValues = {"favorite":false};
 
   return (
     <div>
       <Header />
-      <ProductWizard onFormSubmit={onSubmit} />
+      <ProductWizard onFormSubmit={onSubmit} initialValues={initialValues} />
     </div>
   );
 };

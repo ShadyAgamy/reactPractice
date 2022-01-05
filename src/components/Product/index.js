@@ -11,7 +11,7 @@ export default function Product({PropertyName,image1,
 }){
 
   const getFavState =  useSelector((state) => {
-    return state.allProperties[id].favorite;
+    return state.allProperties[id]  !== undefined ? state.allProperties[id].favorite : false;
   })
   const dispatch = useDispatch();
   return (

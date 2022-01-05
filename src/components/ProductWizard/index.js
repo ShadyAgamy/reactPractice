@@ -7,7 +7,6 @@ import AddProperty from "../../components/AddProperty";
 export default function ProductWizard({
   onFormSubmit,
   initialValues,
-  productToEdit,
 }) {
   return (
     <React.Fragment>
